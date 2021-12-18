@@ -5,9 +5,6 @@
   "type": "module",
   "scripts": {
     "clean": "rimraf dist",
-    "package": "pkg .",
-    "version": "pkg-ver . dist",
-    "build": "npm-run-all package version",
     "lint": "eslint ./src --ext .js,.json",
     "commit": "git-cz",
     "release": "standard-version",
@@ -34,7 +31,6 @@
     }
   },
   "devDependencies": {
-    "@florentinth/pkg-ver": "^1.2.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.5.0",
     "eslint-config-node": "^4.1.0",
@@ -45,13 +41,13 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "npm-run-all": "^4.1.5",
-    "pkg": "^5.5.1",
     "pre-commit": "^1.2.2",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "standard-version": "^9.3.2"
   },
   "dependencies": {
+    "app-root-path": "^3.0.0",
     "await-spawn": "^4.0.2",
     "chalk": "^5.0.0",
     "cli-progress": "^3.9.1",
@@ -61,11 +57,5 @@
     "handbrake-js": "^6.0.0",
     "readdirp": "^3.6.0",
     "yargs": "^17.3.0"
-  },
-  "pkg": {
-    "targets": [
-      "node16-win-x64"
-    ],
-    "outputPath": "./dist"
   }
 }
