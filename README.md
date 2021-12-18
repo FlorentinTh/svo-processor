@@ -10,27 +10,6 @@ CLI application to process recorded SVO files from ZED cameras.
 - [**Florentin Thullier**](https://github.com/FlorentinTh) - 2021
 
 ## Installation
-
-### Simple
-
-1. Download the [latest release](https://github.com/FlorentinTh/svo-processor/releases) of the executable for your platform and rename it as ```svo-processor```.
-
-2. Copy the executable and paste it somewhere safe. For example on windows it can be : ```C:/dev/svo-processor-[release_version]/svo-processor.exe```.
-
-3. Add the path to you environment variable :
-
-> **Note**: replace ```<svo-processor.exe_parent_directory_path>``` by your actual path. Such as ```C:/dev/svo-processor-v1.x/```
-
-   - **Windows** :
-     - with PowerShell :
-     ```sh
-     $ setx PATH "%PATH%;<ws-cli.exe_parent_directory_path>"
-     ```
-
-     _your powershell session need to be restarted._
-
-4. The command ```svo-processor``` should now be available from anywhere through your terminal.
-
 ### Manual
 
 1. [Install or update node](https://nodejs.org/dist/latest-v16.x/) to 16.x or greater if not already done.
@@ -49,14 +28,15 @@ $ gh repo clone FlorentinTh/svo-processor
 
 ```
 
-2. Build the project :
+2. Install the project :
 
 ```sh
+$ cd svo-processor/
 $ npm i
-$ npm run build
+$ npm link
 ```
 
-3. Once completed, in the root project directory you should have a new folder called ```dist``` containing the executable. You can now follow the same instructions as for the [simple installation process](#simple) beginning at step 2.
+3. You should now have access to the ```svo-processor``` command from anywhere in your favorite terminal appication.
 
 ## Usage
 ```
