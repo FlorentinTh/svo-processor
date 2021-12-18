@@ -36,8 +36,5 @@ jobs:
       - name: Install project dependencies
         run: npm ci
 
-      - name: Install project
-        run: npm link
-
       - name: Run project
         run: npm run start
