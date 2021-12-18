@@ -3,7 +3,7 @@ name: snyk
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   security:
