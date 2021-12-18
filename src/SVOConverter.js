@@ -1,5 +1,6 @@
 import os from 'os';
 import path from 'path';
+import RootPath from 'app-root-path';
 import spawn from 'await-spawn';
 import { Tags, ConsoleHelper } from './helpers/consoleHelper.js';
 
@@ -9,8 +10,7 @@ class SVOConverter {
   #output;
 
   constructor(input, output) {
-    const __dirname = path.resolve();
-    const libsFolder = path.join(__dirname, 'src', 'bins');
+    const libsFolder = path.join(RootPath.path, 'static', 'bin');
 
     if (os.platform() === 'win32') {
       this.#ZEDExecutablePath = path.join(libsFolder, 'svo_export.exe');
