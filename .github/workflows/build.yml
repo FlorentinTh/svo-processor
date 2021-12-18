@@ -37,5 +37,8 @@ jobs:
       - name: Install project dependencies
         run: npm ci
 
-      - name: Build project
-        run: npm run build
+      - name: Install project
+        run: npm link
+
+      - name: Run project
+        run svo-processor -v
