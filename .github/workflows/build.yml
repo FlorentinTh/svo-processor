@@ -41,4 +41,4 @@ jobs:
         run: npm link
 
       - name: Run project
-        run svo-processor -v
+        run: svo-processor -v
