@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/FlorentinTh/svo-processor/compare/v1.1.2...v1.1.3) (2021-12-18)
+
+
+### CI
+
+* **gh-actions:** fix a missing semicolon in build workflow ([a698d9f](https://github.com/FlorentinTh/svo-processor/commit/a698d9fc6b68e77221f79fd3a14a30e9a8481adf))
+
 ### [1.1.2](https://github.com/FlorentinTh/svo-processor/compare/v1.1.1...v1.1.2) (2021-12-18)
 
 
