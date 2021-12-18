@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/FlorentinTh/svo-processor/compare/v1.1.4...v1.1.5) (2021-12-18)
+
+
+### CI
+
+* **gh-actions:** fix an issue in build workflow ([e18f1b9](https://github.com/FlorentinTh/svo-processor/commit/e18f1b983b19f261cd806efa2d20a81f9f238821))
+
 ### [1.1.4](https://github.com/FlorentinTh/svo-processor/compare/v1.1.3...v1.1.4) (2021-12-18)
 
 
