@@ -1,4 +1,4 @@
-# zed-preprocess
+# svo-processor
 
 ![platform](https://img.shields.io/badge/platform-win--32%20%7C%20win--64-lightgrey) ![node](https://img.shields.io/badge/node-%3E%3D16-blue) [![license](https://img.shields.io/github/license/florentinth/svo-processor?color=blue)](https://github.com/FlorentinTh/svo-processor/blob/master/LICENSE)
 [![snyk](https://github.com/FlorentinTh/svo-processor/actions/workflows/dependencies.yml/badge.svg)](https://github.com/FlorentinTh/svo-processor/actions/workflows/dependencies.yml) [![build](https://github.com/FlorentinTh/svo-processor/actions/workflows/build.yml/badge.svg)](https://github.com/FlorentinTh/svo-processor/actions/workflows/build.yml) [![GitHub Release](https://img.shields.io/github/release/FlorentinTh/svo-processor)](https://github.com/FlorentinTh/svo-processor/releases)
