@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/FlorentinTh/svo-processor/compare/v1.1.1...v1.1.2) (2021-12-18)
+
+
+### Bug Fixes
+
+* **svoconverter:** fix path issue in SVOConverter and edit bin path ([280af3f](https://github.com/FlorentinTh/svo-processor/commit/280af3f6e24775d3c672db251e8739d320f611d9))
+
+
+### Chore
+
+* **dependencies:** remove  pkg and @florentinth/pkg-ver dependencies and update related scripts ([b7e5170](https://github.com/FlorentinTh/svo-processor/commit/b7e51704bfab84cf2b12c186b0a0b7c796e30c32))
+
+
+### CI
+
+* **gh-actions:** update build workflow according to previous changes and remove useless upload-assets ([22ecb81](https://github.com/FlorentinTh/svo-processor/commit/22ecb81ce340e4fed5cc4d5b26d91f6e30c1334a))
+
+
+### Documentation
+
+* **readme:** update documentation in the README ([ec4a239](https://github.com/FlorentinTh/svo-processor/commit/ec4a2397b0d111ce4b69c880d56c3ec338d8dea0))
+
 ### [1.1.1](https://github.com/FlorentinTh/svo-processor/compare/v1.1.0...v1.1.1) (2021-12-18)
 
 
