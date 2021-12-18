@@ -1,0 +1,45 @@
+name: upload-assets
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - windows-latest
+        node-version:
+          - 16
+        architecture:
+          - x64
+
+    name: Using Node ${{ matrix.node-version }} on ${{ matrix.os }} (${{ matrix.architecture }})
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup node ${{ matrix.node-version }} on ${{ matrix.os }} (${{ matrix.architecture }})
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          architecture: ${{ matrix.architecture }}
+
+      - name: Update npm
+        run: npm i -g npm@latest --registry=https://registry.npmjs.org
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload executables to latest release assets
+        uses: shogo82148/actions-upload-release-asset@v1
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: dist/*

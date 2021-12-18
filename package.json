@@ -1,0 +1,71 @@
+{
+  "name": "svo-processor",
+  "version": "1.0.0",
+  "description": "CLI application to process recorded SVO files from ZED cameras",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist",
+    "package": "pkg .",
+    "version": "pkg-ver . dist",
+    "build": "npm-run-all package version",
+    "lint": "eslint ./src --ext .js,.json",
+    "commit": "git-cz",
+    "release": "standard-version",
+    "publish": "git push --follow-tags"
+  },
+  "bin": {
+    "svo-processor": "./bin/svo-processor"
+  },
+  "keywords": [],
+  "author": "FlorentinTh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorentinTh/svo-processor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FlorentinTh/svo-processor/issues"
+  },
+  "homepage": "https://github.com/FlorentinTh/svo-processor#readme",
+  "pre-commit": [],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@florentinth/pkg-ver": "^1.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.5.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "pkg": "^5.5.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.3.2"
+  },
+  "dependencies": {
+    "await-spawn": "^4.0.2",
+    "chalk": "^5.0.0",
+    "cli-progress": "^3.9.1",
+    "ffprobe": "^1.1.2",
+    "ffprobe-static": "^3.0.0",
+    "file-type": "^17.0.2",
+    "handbrake-js": "^6.0.0",
+    "readdirp": "^3.6.0",
+    "yargs": "^17.3.0"
+  },
+  "pkg": {
+    "targets": [
+      "node16-win-x64"
+    ],
+    "outputPath": "./dist"
+  }
+}

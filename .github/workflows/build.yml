@@ -1,0 +1,41 @@
+
+name: build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - windows-latest
+        node-version:
+          - 14
+          - 16
+        architecture:
+          - x64
+
+    name: Using Node ${{ matrix.node-version }} on ${{ matrix.os }} (${{ matrix.architecture }})
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup node ${{ matrix.node-version }} on ${{ matrix.os }} (${{ matrix.architecture }})
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          architecture: ${{ matrix.architecture }}
+
+      - name: Update npm
+        run: npm i -g npm@latest --registry=https://registry.npmjs.org
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
