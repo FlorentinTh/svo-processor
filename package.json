@@ -9,7 +9,8 @@
     "start": "node ./bin/svo-processor.js -v",
     "commit": "git-cz",
     "release": "standard-version",
-    "publish": "git push --follow-tags"
+    "git:publish": "git push --follow-tags",
+    "npm:publish": "npm publish --access public"
   },
   "bin": {
     "svo-processor": "./bin/svo-processor.js"
