@@ -2,6 +2,7 @@ import os from 'os';
 import path from 'path';
 import RootPath from 'app-root-path';
 import spawn from 'await-spawn';
+import FileHelper from './helpers/fileHelper.js';
 import { Tags, ConsoleHelper } from './helpers/consoleHelper.js';
 
 class SVOConverter {
@@ -10,10 +11,10 @@ class SVOConverter {
   #output;
 
   constructor(input, output) {
-
+    console.log(FileHelper.getPackageJson());
     console.log(RootPath);
 
-    const libsFolder = path.join(RootPath.path, 'static', 'bin');
+    const libsFolder = path.join(RootPath.path, 'src', 'static', 'bin');
 
     console.log(libsFolder);
 
