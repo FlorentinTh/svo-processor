@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.8](https://github.com/FlorentinTh/svo-processor/compare/v1.1.7...v1.1.8) (2021-12-20)
+
+
+### Documentation
+
+* **readme:** update readme: add simple installation documentation ([5e68f06](https://github.com/FlorentinTh/svo-processor/commit/5e68f06154cf77f590f5ed3bf945b57b6ef8812f))
+
 ### [1.1.7](https://github.com/FlorentinTh/svo-processor/compare/v1.1.6...v1.1.7) (2021-12-20)
 
 
