@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.9](https://github.com/FlorentinTh/svo-processor/compare/v1.1.8...v1.1.9) (2021-12-20)
+
+
+### Bug Fixes
+
+* **svoconverter:** add debug to SVOConverter ([51b4e12](https://github.com/FlorentinTh/svo-processor/commit/51b4e123743bae7994156d794a64a0dfb9471f2b))
+
 ### [1.1.8](https://github.com/FlorentinTh/svo-processor/compare/v1.1.7...v1.1.8) (2021-12-20)
 
 
