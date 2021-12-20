@@ -12,7 +12,7 @@
     "publish": "git push --follow-tags"
   },
   "bin": {
-    "svo-processor": "./bin/svo-processor"
+    "svo-processor": "./bin/svo-processor.js"
   },
   "keywords": [],
   "author": "FlorentinTh",
