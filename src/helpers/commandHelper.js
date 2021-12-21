@@ -1,6 +1,7 @@
 import fs from 'fs';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
+import FileHelper from './fileHelper.js';
 import StringHelper from './stringHelper.js';
 import { ProcessorType } from '../VideoProcessor.js';
 
@@ -69,7 +70,7 @@ class CommandHelper {
       })
       .help('h')
       .alias('h', ['H', 'help'])
-      .version()
+      .version(FileHelper.getPackageJson().version)
       .alias('v', ['V', 'version']).argv;
   }
 
