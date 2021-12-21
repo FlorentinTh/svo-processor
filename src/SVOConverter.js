@@ -10,7 +10,11 @@ class SVOConverter {
   #output;
 
   constructor(input, output) {
+    console.log(FileHelper.__dirname);
+
     const libsFolder = path.join(FileHelper.__dirname, 'static', 'bin');
+
+    console.log(libsFolder);
 
     if (os.platform() === 'win32') {
       this.#ZEDExecutablePath = path.join(libsFolder, 'svo_export.exe');
