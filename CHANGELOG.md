@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/FlorentinTh/svo-processor/compare/v1.2.1...v1.2.2) (2021-12-21)
+
+
+### Bug Fixes
+
+* **filehelper:** fix static call to __dirname that led to wrong path usage in SVOConverter ([b07caf8](https://github.com/FlorentinTh/svo-processor/commit/b07caf842066a753c022ca64ca5ff58569db1929))
+
 ### [1.2.1](https://github.com/FlorentinTh/svo-processor/compare/v1.2.0...v1.2.1) (2021-12-21)
 
 
