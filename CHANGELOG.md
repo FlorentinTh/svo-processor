@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/FlorentinTh/svo-processor/compare/v1.1.10...v1.2.0) (2021-12-21)
+
+
+### Features
+
+* **filehelper:** add fileHelper component to better handle project related path of files ([8acafe9](https://github.com/FlorentinTh/svo-processor/commit/8acafe9bb141bfefe5bba481c70a78667f024d74))
+
+
+### Bug Fixes
+
+* **commandhelper:** fix a bug where the version value was unknown ([d12e6ac](https://github.com/FlorentinTh/svo-processor/commit/d12e6ac941d0ec747624b65b3691a9249055d906))
+* **svoconverter:** fix path issue by replacing useless dependency in favor of new fileHelper class ([702ab9d](https://github.com/FlorentinTh/svo-processor/commit/702ab9dffb3e4a96bc62d0a9e3ecfa122847bdcd))
+
 ### [1.1.10](https://github.com/FlorentinTh/svo-processor/compare/v1.1.9...v1.1.10) (2021-12-20)
 
 
