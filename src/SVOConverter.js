@@ -1,7 +1,7 @@
 import os from 'os';
+import url from 'url';
 import path from 'path';
 import spawn from 'await-spawn';
-import FileHelper from './helpers/fileHelper.js';
 import { Tags, ConsoleHelper } from './helpers/consoleHelper.js';
 
 class SVOConverter {
@@ -10,11 +10,8 @@ class SVOConverter {
   #output;
 
   constructor(input, output) {
-    console.log(FileHelper.__dirname);
-
-    const libsFolder = path.join(FileHelper.__dirname, 'static', 'bin');
-
-    console.log(libsFolder);
+    const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+    const libsFolder = path.join(__dirname, 'static', 'bin');
 
     if (os.platform() === 'win32') {
       this.#ZEDExecutablePath = path.join(libsFolder, 'svo_export.exe');
