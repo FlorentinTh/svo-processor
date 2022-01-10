@@ -65,13 +65,22 @@ Options:
                        d the --convert-only flag must be set.
                                                        [string] [default: false]
 
-  -p, -P, --process    Process to complete being either 'rgb', 'depth' or 'rgbd'
-                       .                              [string] [default: "rgbd"]
+  -p, -P, --process    Process to complete being either 'rgb', 'depth' or
+                       'rgbd'.                        [string] [default: "rgbd"]
 
-  -b, -B, --begin      Trim a given number of seconds at the beginning.
+      --trim-only      Only trim a given file. Input must be a single MP4 file.
+                                                      [boolean] [default: false]
+
+   -b, -B, --begin     Trim a given number of seconds at the beginning. This
+                       option may be use during the regular process and with
+                       both --avi and --trim-only flags. However it will be
+                       skipped when --convert-only flag is used.
                                                            [number] [default: 0]
 
-  -e, -E, --end        Trim a given number of seconds at the end.
+  -e, -E, --end        Trim a given number of seconds at the end. This option
+                       may be use during the regular process as well as with
+                       both --avi and --trim-only flags. However it will be
+                       skipped when --convert-only flag is used.
                                                            [number] [default: 0]
 
       --convert-only   Only convert SVO files into AVI format. The file
@@ -81,9 +90,9 @@ Options:
                        by default when input is a directory. The conversion is
                        skipped.                       [boolean] [default: false]
 
-  -h, -H, --help       Show help                                       [boolean]
+  -h, -H, --help       Show help.                                      [boolean]
 
-  -v, -V, --version    Show version number                             [boolean]
+  -v, -V, --version    Show version number.                            [boolean]
 ```
 
 ## License
