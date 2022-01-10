@@ -1,7 +1,8 @@
 import url from 'url';
 import path from 'path';
 import fs from 'fs';
-class FileHelper {
+
+class ProgramHelper {
   static getPackageJson() {
     const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
     const filePath = path.join(__dirname, '..', '..', 'package.json');
@@ -9,4 +10,4 @@ class FileHelper {
   }
 }
 
-export default FileHelper;
+export default ProgramHelper;
