@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/FlorentinTh/svo-processor/compare/v1.2.2...v1.3.0) (2022-01-10)
+
+
+### Features
+
+* **svoprocessor:** add --trim-only flag feature ([164ebb3](https://github.com/FlorentinTh/svo-processor/commit/164ebb3e86c3630eea77266323c2e677e410d9d7))
+
+
+### Chore
+
+* **deps:** update dependencies ([6cccc8e](https://github.com/FlorentinTh/svo-processor/commit/6cccc8e86a8d7b6f1c964f7f38955b370b52871c))
+* **deps:** update dependencies ([ce9a1af](https://github.com/FlorentinTh/svo-processor/commit/ce9a1af32cc6204bab56dc5341a7052719b9fd3d))
+
+
+### Refactors
+
+* **filehelper:** replace FileHelper by ProgramHelper to be more explicit ([8a92a0b](https://github.com/FlorentinTh/svo-processor/commit/8a92a0b24a33f9c485b7eb00c21dea21d4835e89))
+
 ### [1.2.2](https://github.com/FlorentinTh/svo-processor/compare/v1.2.1...v1.2.2) (2021-12-21)
 
 
