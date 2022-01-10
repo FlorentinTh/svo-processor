@@ -40,16 +40,24 @@ class CommandHelper {
         demandOption: false,
         default: 'rgbd'
       })
+      .option('trim-only', {
+        describe: 'Only trim a given file. Input must be a single MP4 file.',
+        type: 'boolean',
+        demandOption: false,
+        default: false
+      })
       .option('begin', {
         alias: ['b', 'B'],
-        describe: 'Trim a given number of seconds at the beginning.',
+        describe:
+          'Trim a given number of seconds at the beginning. This option may be use during the regular process and with both --avi and --trim-only flags. However it will be skipped when --convert-only flag is used',
         number: true,
         demandOption: false,
         default: 0
       })
       .option('end', {
         alias: ['e', 'E'],
-        describe: 'Trim a given number of seconds at the end.',
+        describe:
+          'Trim a given number of seconds at the end. This option may be use during the regular process as well as with both --avi and --trim-only flags. However it will be skipped when --convert-only flag is used',
         number: true,
         demandOption: false,
         default: 0

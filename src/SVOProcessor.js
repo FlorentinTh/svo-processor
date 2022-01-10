@@ -72,7 +72,7 @@ class SVOProcessor {
       process.exit(1);
     }
 
-    if (!this.#argv.convertOnly) {
+    if (!this.#argv.convertOnly && !this.#argv.trimOnly) {
       if (this.#argv.process.toUpperCase() === ProcessorType.BOTH) {
         this.#maxProgressValue += nbInputFiles * 2;
       } else {
@@ -112,6 +112,9 @@ class SVOProcessor {
     for (const file of files) {
       let AVIFileName;
       let AVIFilePath;
+
+      let MP4FileName;
+      let MP4FilePath;
 
       let processConfig = {
         start: this.#argv.begin,
@@ -161,6 +164,7 @@ class SVOProcessor {
       if (!this.#isInfosPrinted) {
         this.#setMaxProgressValue(files.length);
       }
+
       if (videoFormat === VideoFormat.SVO) {
         AVIFileName = `${file.basename.split('.')[0]}.${VideoFormat.AVI}`;
 
@@ -225,27 +229,63 @@ class SVOProcessor {
         if (!this.#isInfosPrinted) {
           this.#showStartInfos();
         }
-      }
+      } else if (videoFormat === VideoFormat.MP4) {
+        MP4FileName = file.basename;
+        MP4FilePath = file.fullPath;
 
-      if (!this.#argv.convertOnly) {
-        const videoProcessor = new VideoProcessor(AVIFilePath, processConfig);
+        const stream = fs.createReadStream(MP4FilePath);
+        const fileType = await fileTypeFromStream(stream);
 
-        let transformed;
-        try {
-          transformed = await videoProcessor.transform(this.#argv.process.toUpperCase(), {
-            current: this.#currentProgressValue,
-            bar: this.#progressBar
-          });
-        } catch (error) {
+        if (fileType === undefined || !(fileType.mime === 'video/mp4')) {
           ConsoleHelper.printMessage(
             Tags.ERROR,
-            `Error occurs while processing ${AVIFileName}`,
-            error
+            `The file: ${MP4FileName} is not a proper MP4 file. It might be corrupted in some ways`
           );
           process.exit(1);
         }
 
-        this.#currentProgressValue = transformed;
+        if (!this.#isInfosPrinted) {
+          this.#showStartInfos();
+        }
+      }
+
+      if (!this.#argv.convertOnly) {
+        let filePath;
+        let currentProcess;
+
+        if (AVIFilePath === undefined && !(MP4FilePath === undefined)) {
+          filePath = MP4FilePath;
+          currentProcess = ProcessorType.TRIM;
+        } else if (MP4FilePath === undefined && !(AVIFilePath === undefined)) {
+          filePath = AVIFilePath;
+          currentProcess = this.#argv.process.toUpperCase();
+        } else {
+          ConsoleHelper.printMessage(
+            Tags.ERROR,
+            `Cannot process input, the path does not exists.`
+          );
+          process.exit(1);
+        }
+
+        const videoProcessor = new VideoProcessor(filePath, processConfig);
+
+        let transformed;
+        try {
+          transformed = await videoProcessor.transform(currentProcess, {
+            current: this.#currentProgressValue,
+            bar: this.#progressBar
+          });
+        } catch (error) {
+          // ConsoleHelper.printMessage(
+          //   Tags.ERROR,
+          //   `Error occurs while processing ${filePath}`,
+          //   error
+          // );
+          console.log(error);
+          process.exit(1);
+        }
+
+        this.#currentProgressValue = transformed.current;
       }
     }
   }
@@ -260,11 +300,31 @@ class SVOProcessor {
       const argvPath = this.#argv._[0];
 
       let pathStats = null;
-      pathStats = await fs.promises.lstat(argvPath);
 
-      const videoFormat = this.#argv.avi ? VideoFormat.AVI : VideoFormat.SVO;
+      try {
+        pathStats = await fs.promises.lstat(argvPath);
+      } catch (error) {
+        ConsoleHelper.printMessage(Tags.ERROR, `${error}`);
+        process.exit(1);
+      }
+
+      let videoFormat;
+      if (this.#argv.avi) {
+        videoFormat = VideoFormat.AVI;
+      } else {
+        if (this.#argv.trimOnly) {
+          videoFormat = VideoFormat.MP4;
+        } else {
+          videoFormat = VideoFormat.SVO;
+        }
+      }
 
       if (pathStats.isDirectory()) {
+        if (videoFormat === VideoFormat.MP4) {
+          ConsoleHelper.printMessage(Tags.ERROR, `Input path cannot be a directory`);
+          process.exit(1);
+        }
+
         const files = await this.#getFiles(argvPath, videoFormat, {
           recursive: this.#argv.recursive
         });
