@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "lint": "eslint ./src --ext .js,.json",
-    "start": "node ./bin/svo-processor.js -v",
+    "test": "node ./bin/svo-processor.js -v",
     "commit": "git-cz",
     "release": "standard-version",
     "git:publish": "git push --follow-tags",
