@@ -15,7 +15,7 @@ CLI application to process recorded SVO files from ZED cameras.
 
 ### Simple
 
-1. [Install or update node](https://nodejs.org/dist/latest-v16.x/) to 16.x or greater if not already done.
+1. [Install or update node](https://nodejs.org/dist/latest-v16.x/) to 16 or greater if not already done.
 
 2. Install the project :
 
@@ -27,7 +27,7 @@ $ npm install -g svo-processor
 
 1. [Install or update node](https://nodejs.org/dist/latest-v16.x/) to 16.x or greater if not already done.
 
-2. Clone this repo :
+2. Clone this repo:
 ```sh
 $ git clone https://github.com/FlorentinTh/svo-processor.git
 
@@ -41,15 +41,24 @@ $ gh repo clone FlorentinTh/svo-processor
 
 ```
 
-2. Install the project :
+2. Install the project:
 
 ```sh
 $ cd svo-processor/
 $ npm i
-$ npm link
 ```
 
-3. You should now have access to the ```svo-processor``` command from anywhere in your favorite terminal appication.
+3. Run the program locally:
+
+```sh
+$ node ./bin/svo-processor.js
+```
+4. Run the program globally:
+
+```sh
+$ npm run link
+```
+_You should now have access to the ```svo-processor``` command from anywhere in your favorite terminal appication._
 
 ## Usage
 ```
