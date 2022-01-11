@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/FlorentinTh/svo-processor/compare/v1.3.1...v1.3.2) (2022-01-11)
+
+
+### Bug Fixes
+
+* **svoprocessor:** fix a minor issue in error handling ([e534400](https://github.com/FlorentinTh/svo-processor/commit/e534400563c5e372385fa3551c2e31d83e1c0f45))
+
+
+### Chore
+
+* **deps:** remove unused dependencies ([8232f15](https://github.com/FlorentinTh/svo-processor/commit/8232f15b9c26d18b5878c5f44e5187434da1bc27))
+
+
+### Documentation
+
+* **readme:** edit readme ([cbadb0d](https://github.com/FlorentinTh/svo-processor/commit/cbadb0de803ebdac9d3758abcf37622759a64671))
+
+
+### CI
+
+* **build:** move start command to test command in both package.json and build.yml ([095a8d2](https://github.com/FlorentinTh/svo-processor/commit/095a8d285521d5061a6acce2ec8172152e0309d7))
+
 ### [1.3.1](https://github.com/FlorentinTh/svo-processor/compare/v1.3.0...v1.3.1) (2022-01-10)
 
 
