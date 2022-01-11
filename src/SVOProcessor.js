@@ -18,17 +18,17 @@ class SVOProcessor {
 
   #isInfosPrinted;
 
-  constructor() {
-    this.#initProgressBar();
-    this.#isInfosPrinted = false;
-  }
-
   get progressBar() {
     return this.#progressBar;
   }
 
   set argv(argv) {
     this.#argv = argv;
+  }
+
+  constructor() {
+    this.#initProgressBar();
+    this.#isInfosPrinted = false;
   }
 
   #initProgressBar() {
@@ -276,12 +276,11 @@ class SVOProcessor {
             bar: this.#progressBar
           });
         } catch (error) {
-          // ConsoleHelper.printMessage(
-          //   Tags.ERROR,
-          //   `Error occurs while processing ${filePath}`,
-          //   error
-          // );
-          console.log(error);
+          ConsoleHelper.printMessage(
+            Tags.ERROR,
+            `Error occurs while processing ${filePath}`,
+            error
+          );
           process.exit(1);
         }
 
