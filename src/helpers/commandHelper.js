@@ -27,8 +27,7 @@ class CommandHelper {
       })
       .option('output', {
         alias: ['o', 'O'],
-        describe:
-          'Output path. It must be either a file or a folder. If the output is a file, the input also require to be a path and the --convert-only flag must be set.',
+        describe: `Output path. It must be either a file or a folder. If the output is a file, the input also require to be a path and the --convert-only flag must be set.`,
         string: true,
         demandOption: false,
         default: false
@@ -48,16 +47,14 @@ class CommandHelper {
       })
       .option('begin', {
         alias: ['b', 'B'],
-        describe:
-          'Trim a given number of seconds at the beginning. This option may be use during the regular process and with both --avi and --trim-only flags. However it will be skipped when --convert-only flag is used',
+        describe: `Trim a given number of seconds at the beginning. This option may be use during the regular process and with both --avi and --trim-only flags. However it will be skipped when --convert-only flag is used`,
         number: true,
         demandOption: false,
         default: 0
       })
       .option('end', {
         alias: ['e', 'E'],
-        describe:
-          'Trim a given number of seconds at the end. This option may be use during the regular process as well as with both --avi and --trim-only flags. However it will be skipped when --convert-only flag is used',
+        describe: `Trim a given number of seconds at the end. This option may be use during the regular process as well as with both --avi and --trim-only flags. However it will be skipped when --convert-only flag is used`,
         number: true,
         demandOption: false,
         default: 0
@@ -70,8 +67,7 @@ class CommandHelper {
         default: false
       })
       .option('avi', {
-        describe:
-          'Search for existing AVI files to process instead of SVO by default when input is a directory. The conversion is skipped.',
+        describe: `Search for existing AVI files to process instead of SVO by default when input is a directory. The conversion is skipped.`,
         type: 'boolean',
         demandOption: false,
         default: false

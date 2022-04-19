@@ -1,4 +1,4 @@
-import path, { parse } from 'path';
+import path from 'path';
 import fs from 'fs';
 import ffprobe from 'ffprobe';
 import ffprobeStatic from 'ffprobe-static';
