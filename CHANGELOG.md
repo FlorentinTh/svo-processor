@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.6](https://github.com/FlorentinTh/svo-processor/compare/v1.3.5...v1.3.6) (2022-04-22)
+
+
+### Chore
+
+* **deps:** fix some dependencies vulnerabilities ([2406033](https://github.com/FlorentinTh/svo-processor/commit/2406033d991c952b3649af4053c53f1fd6a818c6))
+* **eslint:** fix previous changes made in eslint config and related remediations ([517f499](https://github.com/FlorentinTh/svo-processor/commit/517f499f08c99663405049b8bb46a5142407740e))
+
 ### [1.3.5](https://github.com/FlorentinTh/svo-processor/compare/v1.3.4...v1.3.5) (2022-04-19)
 
 

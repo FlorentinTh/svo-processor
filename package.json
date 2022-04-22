@@ -1,6 +1,6 @@
 {
   "name": "svo-processor",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "CLI application to process recorded SVO files from ZED cameras",
   "type": "module",
   "scripts": {
