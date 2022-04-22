@@ -22,6 +22,10 @@ class SVOProcessor {
     return this.#progressBar;
   }
 
+  get argv() {
+    return this.#argv;
+  }
+
   set argv(argv) {
     this.#argv = argv;
   }
@@ -38,7 +42,7 @@ class SVOProcessor {
   }
 
   async #getFiles(path, filter, options = { recursive: false }) {
-    let conf = {
+    const conf = {
       fileFilter: `*.${filter}`,
       alwaysStat: true
     };
