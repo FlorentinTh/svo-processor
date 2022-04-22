@@ -52,5 +52,10 @@
     "handbrake-js": "^6.0.0",
     "readdirp": "^3.6.0",
     "yargs": "^17.4.1"
+  },
+  "overrides": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "minimist": "^1.2.6"
   }
 }
