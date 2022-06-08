@@ -45,7 +45,7 @@
   "dependencies": {
     "await-spawn": "^4.0.2",
     "chalk": "^5.0.1",
-    "cli-progress": "^3.11.0",
+    "cli-progress": "^3.11.1",
     "ffprobe": "^1.1.2",
     "ffprobe-static": "^3.0.0",
     "file-type": "^17.1.1",
