@@ -48,7 +48,7 @@
     "cli-progress": "^3.11.0",
     "ffprobe": "^1.1.2",
     "ffprobe-static": "^3.0.0",
-    "file-type": "^17.1.1",
+    "file-type": "^17.1.2",
     "handbrake-js": "^6.0.0",
     "readdirp": "^3.6.0",
     "yargs": "^17.5.1"
