@@ -51,7 +51,7 @@
     "file-type": "^17.1.2",
     "handbrake-js": "^6.0.0",
     "readdirp": "^3.6.0",
-    "yargs": "^17.5.1"
+    "yargs": "^17.6.0"
   },
   "overrides": {
     "commitizen": "^4.2.4",
